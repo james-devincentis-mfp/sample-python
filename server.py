@@ -11,7 +11,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         
         external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
-        msg = 'Hello! the external ip is %s' % (exteral_ip)
+        msg = 'Hello! the external ip is %s' % (external_ip)
         self.wfile.write(msg.encode())
 
 
